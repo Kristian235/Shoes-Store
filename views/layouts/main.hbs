@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "/styles/nav.css">
+    <link rel="icon" type="image/x-icon" href="shoeLg.ico?v=1">
+    <title>Shoes Store</title>
+</head>
+<body>
+    <!--Navbar-->
+<nav class = "navbar">                   
+          <div class = "navbar-links">
+              <ul>
+                <li><a href = "/">Home</a></li>
+                <li><a href = "/man">Man</a></li>
+                <li><a href = "/woman">Woman</a></li>
+                <!--Users-->
+                {{#if isAuthenticated}}
+                <li><a href="/auth/logout">Logout</a></li>
+                <!--Guest-->
+                {{else}}
+                <li><a href="/auth/login">Login</a></li>
+                <li><a href="/auth/register">Register</a></li>
+                {{/if}}
+              </ul>    
+          </div>    
+</nav>
+
+<!--Bottom Nav-->
+<div class = "bottom">
+    <h2>Shoes Store</h2>
+</div>
+    {{{body}}}
+</body>
+</html>

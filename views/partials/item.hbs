@@ -1,0 +1,10 @@
+<!--Item-->
+{{#each shoes}}
+<div class = "item">
+       <img src = "{{imageURL}}">
+       <h3>{{description}}</h3>
+       <p>Price: {{price}}$</p>
+       <button class = "button" name = "btn"><a class = "info-link" href = "/information/{{id}}">Information</a></button>
+</div>
+{{/each}}
+
